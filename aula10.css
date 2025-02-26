@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#menu{
+    background-color: #424e5e;
+    
+}
+#menu ul{
+    list-style: none;
+}
+#menu ul li{
+    display: inline;
+}
+#menu ul li a {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffea;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+#menu ul li a:hover{
+    color: black;
+    background-color: #7a959e;
+    transition: 0.5s all;
+}
+#logo{
+    margin-right: 50px;
+}
+header{
+    display: flex;
+    align-items: center;
+    background-color: #424e5e;
+    padding: 0 50px;
+}
