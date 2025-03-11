@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+    <title>Aula 11 </title>
+    <meta charset="utf-8">
+    <style>
+      .form-group{
+         margin-bottom: 10px;
+      }
+      button{
+         background-color: rgb(33,33,105 );
+         border: none;
+         color: white;
+         padding: 10px;
+         cursor: pointer;
+         border-radius: 5px;
+      }
+      
+    </style>
+   </head>
+   <body>
+      <form name="form1" method="post" action="grava.jsp">
+         
+          <div class="form-group">
+            <label for="txtnome">Nome:</label>
+            <input type="text" id="txtnome" name="txtnome">
+          </div>
+          <div class="form-group">
+            <label for="txtsenha">Senha:</label>
+            <input type="password" id="txtsenha" name="txtsenha">
+          </div>
+          <div class="form-group">
+            <label for="txtmensagem">Mensagem:</label> <br>
+            <textarea cols="40" rows="6" name="txtmensagem" id="txtmensagem" name="txtmensagem"></textarea>
+          </div>
+          <div class="form-group">
+             <label>Sexo:</label>
+             <input type="radio" id="masculino" name="Sexo" value="M">
+             <label for="masculino">Masculino</label>
+             
+             <input type="radio" id="feminino" name="Sexo" value="F">
+             <label for="feminino">feminino</label>
+          </div>
+
+          <div class="form-group">
+            <label>Curso</label>
+            <input type="checkbox" id="html" name="cursos" value="html">
+            <label for="html">HTML</label>
+            
+            <input type="checkbox" id="css" name="cursos" value="css">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="javascript" name="cursos" value="javascript">
+            <label for="javascript">javascript</label>
+              
+          </div>
+          <div class="form-group">
+            <label for="estado">Estados</label>
+            <select id="estado" name="estado">
+             <option value="SP">São Paulo</option>
+             <option value="RJ">Rio de janeiro</option>
+             <option value="SC">Santa Catarina</option>
+            </select>
+          </div>
+          <div class="form-group">
+         
+             <button type="submit">Enviar</button>
+             <button type="reset">Limpar</button>
+          </div>
+      </form>
+   </body>
+</html>
