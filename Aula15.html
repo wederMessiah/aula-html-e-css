@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>AULA 15</title>
+        <meta charset="utf-8">
+        <style>
+            span{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="form1" action="grava.jsp" method="post">
+            <fieldset>
+                <legend>Cadastro</legend>
+                <label for="txtnome">Nome:</label>
+                <input type="text" id="txtnome" name="txtnome">
+                <span id="erronome"></span>
+                <br>
+                <label for="txtemail">E-mail:</label>
+                <input type="text" id="txtemail" name="txtemail">
+                <span id="erroemail"></span>
+                <br>
+                <label for="txtidade">Idade:</label>
+                <input type="text" id="txtidade" name="txtidade">
+                <span id="erroidade"></span>
+                <br>
+                <button type="button" onclick="verificar()">Gravar</button>
+            </fieldset>
+        </form>
+        <script>
+            function verificar(){
+                var enviar = true;
+               var nome = document.getElementById("txtnome").value;
+               var idade =document.getElementById("txtidade").value;
+               var email =document.getElementById("txtemail").value;
+               
+               if(nome.length == 0){
+                 document.getElementById("erronome").textContent= "Prencha o campo nome " ;
+                 document.getElementById("txtnome").style.backgroundColor = "lightyellow" ;
+                 enviar= false;
+               }
+         
+               if (enviar){
+                document.form1.submit();
+               }
+               if(isNaN(idade) || idade.length == 0){
+                 document.getElementById("erroidade").textContent= "Prencha corretamente a sua idade" ;
+                 document.getElementById("txtidade").style.backgroundColor = "lightyellow" ;
+                 enviar= false;
+               }
+               if( email.indexOf("@")< 0|| email.length == 0){
+                 document.getElementById("erroemail").textContent= "Prencha corretamente seu email" ;
+                 document.getElementById("txtemail").style.backgroundColor = "lightyellow" ;
+                 enviar= false;
+               }
+            }
+        </script>
+    </body>
+</html>
